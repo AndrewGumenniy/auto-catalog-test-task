@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  .field-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .field-container > * {
+    width: 100%;
+  }
+
+  mat-card{
+      width: 400px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 400px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .submit-button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }

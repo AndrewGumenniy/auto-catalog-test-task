@@ -1,0 +1,21 @@
+mat-list-item {
+    height: 150px !important;
+}
+
+mat-list-item img {
+    height: 120px !important;
+    width: 120px !important;
+}
+
+mat-list-avatar {
+    height: 120px;
+    width: 120px;
+}
+
+mat-list-item .title {
+    font-weight: bold;
+}
+
+mat-list-item:hover {
+    cursor: pointer;
+}

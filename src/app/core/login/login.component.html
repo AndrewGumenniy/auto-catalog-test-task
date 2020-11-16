@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="field-container">
+                <mat-form-field>
+                    <input matInput placeholder="Введите ваше email *" formControlName="email">
+                    <mat-error *ngIf="hasError('email', 'required')">Email обязателен</mat-error>
+                    <mat-error *ngIf="hasError('email', 'email')">Пожалуйста введите валидный Email</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="field-container">
+                <mat-form-field>
+                    <input matInput placeholder="Введите ваш пароль *" [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="hasError('password', 'required')">Пароль обязателен</mat-error>
+                    <mat-error *ngIf="hasError('password', 'minlength')">Пароль должен быть как минимум 8 символов</mat-error>
+                    <mat-error *ngIf="hasError('password', 'pattern')">Ваш пароль должен содержать как минимум одну цифру и одну заглавную букву</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="submit-button">
+                <button [disabled]="!loginForm.valid" type="submit" color="primary" mat-raised-button>Login</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

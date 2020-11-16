@@ -1,0 +1,7 @@
+<mat-list>
+    <app-auto-item 
+        *ngFor="let auto of autoList"
+        [auto]="auto"
+        (click)="navigateToDetails(auto.id)">
+    </app-auto-item>
+</mat-list>

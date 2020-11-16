@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>Авто Каталог</h1>
+      <div *ngIf="loggedIn()" class="menu">
+        <a mat-button [routerLink]="['/auto-list']"> Каталог </a>
+        <a mat-button [routerLink]="['/create']"> Добавить </a>
+      </div>
+      <div class="flex-spacer"></div>
+      <mat-icon *ngIf="loggedIn()" title="Выйти" class="example-icon" aria-hidden="false" aria-label="Example heart icon" (click)="logout()">exit_to_app</mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
